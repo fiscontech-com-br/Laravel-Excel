@@ -461,7 +461,7 @@ class Sheet
     {
         $sheetExport->query()->chunkById($this->getChunkSize($sheetExport), function ($chunk) use ($sheetExport) {
             $this->appendRows($chunk, $sheetExport);
-        });
+        }, $sheetExport->getTableIdColumn(), $sheetExport->getTableIdColumnAlias());
     }
 
     /**
