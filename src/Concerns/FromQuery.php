@@ -12,4 +12,14 @@ interface FromQuery
      * @return Builder|EloquentBuilder|Relation
      */
     public function query();
+    
+    /**
+    * @return string
+    */
+    public function getTableIdColumn();
+    
+    /**
+    * @return string
+    */
+    public function getTableIdColumnAlias();
 }
